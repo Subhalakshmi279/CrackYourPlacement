@@ -1,0 +1,31 @@
+Add digits
+
+class Solution {
+    public int addDigits(int num) {
+
+        int var = num;
+
+        int temp = 0, count = 0;
+
+
+        while(num != 0)
+        {
+            temp = num % 10;
+            num /= 10;
+            num += temp;
+            count ++;
+
+            if(num/10 == 0)
+            {
+                return num;
+                // break;
+            }
+        }
+        
+        if(count == 1)
+            return var; 
+
+
+        return num;
+    }
+}
